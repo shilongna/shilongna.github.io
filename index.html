@@ -2,11 +2,108 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<meta name="keywords" content="是龙呐;shilongna"/>
+		<title>是龙呐的网站</title>
+		<style>
+			a:link{
+				color: blue;<!--未访问过链接后的颜色-->
+			}
+			a:visited{
+				color: black;<!--访问过链接后的颜色-->
+			}
+			a:hover{
+				color: blueviolet;<!--鼠标移动到链接时候的颜色-->
+			}
+			a:active{
+				color: chartreuse;<!--鼠标按下链接时的颜色-->
+			}
+			<!-- textarea.{resize:none;} 取消文本域拖拽-->
+			
+		</style>
 	</head>
 	<body>
 		<h1>是龙呐的网站</h1>
+		<a href="https://ndyian.github.io/#/pages/CSS/CSS%E9%80%89%E6%8B%A9%E5%99%A8">学习HTML</a><hr />
 		<p>测试</p>
+		
 		<a href="shilongna.jpg" download>下载图片</a>
+		
+		<marquee direction="right">是龙呐</marquee> <!--marquee(字幕滑动),direction(滑动方向)-->
+		
+		<div>
+			<a href="#">是龙呐</a>
+		</div>
+		
+		<div>
+	      	多选<input type="file" multiple> <br />
+			单选<input type="file">
+		</div>
+		
+		<div>
+		    <input type="checkbox" checked> 多选1
+			<input type="checkbox" checked> 多选2
+			
+			<input type="radio" id="man">
+			<label for="man">男</label>
+			
+			<label><input type="radio">女</label>
+			
+			
+		</div>
+		
+		<div>
+			<select multiple>
+			  <option>北京</option>
+			  <option>武汉</option>
+			  <option selected>福建</option> <!--selected表默认选中-->
+			  <option>上海</option>
+			  <option>广州</option>
+			  <option>深圳</option>
+			  <option>西安</option>
+			  <option>成都</option>
+			</select>
+		</div>
+		
+		<div>
+			<select>
+			  <option>北京</option>
+			  <option>上海</option>
+			  <option>广州</option>
+			  <option>深圳</option>
+			  <option selected>武汉</option>
+			</select>
+		</div>
+		
+		<div>
+		    <select>
+		      <optgroup label="水果">
+		        <option value="">苹果</option>
+		        <option value="">香蕉</option>
+		      </optgroup>
+		      <optgroup label="蔬菜">
+		        <option value="">西红柿</option>
+		        <option value="">青菜</option>
+		      </optgroup>
+		    </select>
+		</div>
+		
+		<div>
+		    <textarea cols="20" rows="2" name="content">龙的文本</textarea>
+		</div>
+		
+		<div>
+		                                         <!-- form 表单区域 -->
+		                                         <!-- action="" 发送数据的地址 -->
+		    <form action="">
+		      用户名：<input type="text">
+		      <br><br>
+		      密码：<input type="password">
+		      <br><br>                            <!-- 如果省略 type 属性，功能是 提交 -->
+		      <button type="submit">提交</button>
+		      <button type="reset">重置</button>
+		      <button type="button">按钮</button> 
+		    </form>
+		</div>
+		
 	</body>
 </html>
