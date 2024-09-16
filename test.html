@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+	</head>
+	<body>
+		<div>
+			<!--strong加粗，em倾斜，del删除线，ins下划线-->
+			<strong>加粗</strong>
+			<b>加粗</b>
+			<em>推荐这个倾斜</em>
+			<i>倾斜</i>
+			<del>删除线</del>
+			<s>删除线</s>
+			<ins>下划线</ins>
+			<u>下划线</u>
+		</div>
+		<div>
+			<div>我是div我单独占一行</div> <!--div一个大盒子-->
+			<div>我是div我单独占一行</div>
+			<span>百度</span><!--span小盒子之间有跨距-->
+			<span>百度</span>
+			<span>百度</span>
+		</div>
+		<div>
+			<!--src图片链接，alt图片加载失败文字显示,title鼠标放到图片显示的文字,border图片边框-->
+			<img src="image/shilongna.jpg" alt="加载失败" border="10" title="我是龙呐" width="200" height="200">
+		</div>
+		<div>
+			<!--href跳转URL #表空链接,target跳转窗口方式, 属性： _self 当前窗口打开，_blank新窗口打开-->
+			<a href="https://www.bilibili.com/" target="_blank">bilibili</a>
+			<a href="#">空链接</a>
+			<a href="shilongna.jpg" download>下载图片</a> <!--加入文件链接会下载-->
+			<a href="#"><img src="image/shilongna.jpg" width="100" height="100"/></a>
+		</div>
+		<div>
+			<!--移动到 one 的网页位置-->
+			<a href="#one">寻找一</a>
+		</div>
+		
+		<div>
+			<!--
+			tr 行
+			th 列 表头 居中并加粗  要在tr里
+			td 列 数据单元
+			border表有无边框 默认无,“ ”or“1”
+			align对齐方式：centet居中,
+			cellpadding文字与边框的距离
+			cellspacing边框与边框的距离
+			thead表格头部 内部必须有tr
+			tbody表格内容
+			rowspan 跨行合并
+			colspan 跨列合并
+			-->
+			<table border="1" align="left" cellpadding="0" cellspacing="0" width="500" height="300">
+				<thead>
+					<tr>
+					    <th>姓名</th> <th>性别</th> <th>年龄</th>
+				    </tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>张三</th> <th>男</th> <th>20</th>
+					</tr>
+					<tr>
+						<th>李四</th> <th>女</th> <th >31</th>
+					</tr>
+				</tbody>
+			</table>
+
+			<table border="1"width="500" height="300">
+				<tr>
+					<td></td>
+					<td rowspan="2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td colspan="2"></td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		<h1 id="one">我是一</h1>
+	</body>
+</html>
