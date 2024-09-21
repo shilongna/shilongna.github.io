@@ -6,12 +6,20 @@
 		<link rel="stylesheet" href="URl" type="text/css">
 		<!--css优先级 行内>id>类>标签-->
 		<style>
+			.xz {
+				transform-origin: center;
+				transition: all 1s;
+			}
+
+			.xz:hover {
+				transform: rotate(360deg);
+			}
+
 			.b1 {
 				width: 100px;
 				height: 100px;
 				margin: 100px auto;
 				background-color: aqua;
-
 				transition: all 1s;
 				< !--旋转速度-->;
 				transform-origin: center;
@@ -59,7 +67,7 @@
 				display: block;
 				width: 150px;
 				height: 50px;
-				color: aqua;
+				color: green;
 				background-color: yellow;
 				padding-top: 25px;
 				text-decoration: none;
@@ -67,7 +75,7 @@
 			}
 
 			.a1:hover {
-				background-color: aqua;
+				background-color: green;
 			}
 
 			body {
@@ -84,6 +92,9 @@
 		</style>
 	</head>
 	<body>
+		<h1>
+			<a href="index.html">首页</a>
+		</h1>
 		<div class="b1"></div>
 
 
@@ -105,7 +116,7 @@
 			<span>百度</span>
 			<span>百度</span>
 		</div>
-		<div>
+		<div class="xz">
 			<!--src图片链接，alt图片加载失败文字显示,title鼠标放到图片显示的文字,border图片边框-->
 			<img src="image/shilongna.jpg" alt="加载失败" border="10" title="我是龙呐" width="200" height="200">
 		</div>
