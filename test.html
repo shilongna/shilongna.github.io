@@ -3,8 +3,90 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test</title>
+		<link rel="stylesheet" href="URl" type="text/css">
+		<!--css优先级 行内>id>类>标签-->
+		<style>
+			.b1 {
+				width: 100px;
+				height: 100px;
+				margin: 100px auto;
+				background-color: aqua;
+
+				transition: all 1s;
+				< !--旋转速度-->;
+				transform-origin: center;
+				< !--旋转中心点位置-->;
+			}
+
+			.b1:hover::before {
+				transform: rotate(360deg);
+				< !--旋转360度 deg-度 -->
+			}
+
+			.b1::before {
+				content: "123";
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				transform: rotate(180deg);
+				transform-origin: left;
+				transition: all 1s;
+			}
+
+
+			a:link {
+				color: #ffffff;
+				< !--未访问过链接后的颜色-->
+			}
+
+			a:visited {
+				color: black;
+				< !--访问过链接后的颜色-->
+			}
+
+			a:hover {
+				color: blueviolet;
+				< !--鼠标移动到链接时候的颜色-->
+			}
+
+			a:active {
+				color: chartreuse;
+				< !--鼠标按下链接时的颜色-->
+			}
+
+			.a1 {
+				display: block;
+				width: 150px;
+				height: 50px;
+				color: aqua;
+				background-color: yellow;
+				padding-top: 25px;
+				text-decoration: none;
+				text-indent: 2em;
+			}
+
+			.a1:hover {
+				background-color: aqua;
+			}
+
+			body {
+				background-size: 300px;
+				< !--background: 背景颜色 背景图片地址 背景平铺 背景图片滚动 背景图片位置-->;
+				background: rgba(red, green, blue, alpha透明度);
+				background-attachment: fixed;
+				background-position: top right;
+				;
+				< !--背景固定-->;
+				background-image: url(image/QQ图片20230325140837.jpg);
+				background-repeat: no-repeat;
+			}
+		</style>
 	</head>
 	<body>
+		<div class="b1"></div>
+
+
 		<div>
 			<!--strong加粗，em倾斜，del删除线，ins下划线-->
 			<strong>加粗</strong>
@@ -27,18 +109,20 @@
 			<!--src图片链接，alt图片加载失败文字显示,title鼠标放到图片显示的文字,border图片边框-->
 			<img src="image/shilongna.jpg" alt="加载失败" border="10" title="我是龙呐" width="200" height="200">
 		</div>
+
 		<div>
 			<!--href跳转URL #表空链接,target跳转窗口方式, 属性： _self 当前窗口打开，_blank新窗口打开-->
 			<a href="https://www.bilibili.com/" target="_blank">bilibili</a>
 			<a href="#">空链接</a>
 			<a href="shilongna.jpg" download>下载图片</a> <!--加入文件链接会下载-->
-			<a href="#"><img src="image/shilongna.jpg" width="100" height="100"/></a>
+			<a href="#"><img src="image/shilongna.jpg" width="100" height="100" /></a>
 		</div>
+
 		<div>
 			<!--移动到 one 的网页位置-->
 			<a href="#one">寻找一</a>
 		</div>
-		
+
 		<div>
 			<!--
 			tr 行
@@ -56,20 +140,26 @@
 			<table border="1" align="left" cellpadding="0" cellspacing="0" width="500" height="300">
 				<thead>
 					<tr>
-					    <th>姓名</th> <th>性别</th> <th>年龄</th>
-				    </tr>
+						<th>姓名</th>
+						<th>性别</th>
+						<th>年龄</th>
+					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>张三</th> <th>男</th> <th>20</th>
+						<th>张三</th>
+						<th>男</th>
+						<th>20</th>
 					</tr>
 					<tr>
-						<th>李四</th> <th>女</th> <th >31</th>
+						<th>李四</th>
+						<th>女</th>
+						<th>31</th>
 					</tr>
 				</tbody>
 			</table>
 
-			<table border="1"width="500" height="300">
+			<table border="1" width="500" height="300">
 				<tr>
 					<td></td>
 					<td rowspan="2"></td>
@@ -85,8 +175,99 @@
 				</tr>
 			</table>
 		</div>
-		
-		
+
+		<div>
+			<ul>
+				<li>西瓜</li>
+				<li>苹果</li>
+				<li>香蕉</li>
+				<li>火龙果</li>
+			</ul>
+
+			<ol>
+				<li>西瓜</li>
+				<li>苹果</li>
+				<li>香蕉</li>
+				<li>火龙果</li>
+			</ol>
+
+			<!-dt标题 dd标题解释-->
+				<dl>
+					<dt>关注我</dt>
+					<dd>QQ</dd>
+					<dd>微信</dd>
+					<dd>微博</dd>
+				</dl>
+		</div>
+
+		<div>
+			<textarea cols="20" rows="2" name="content">龙的文本</textarea>
+		</div>
+
+		<div>
+			<!--
+			表单域 form标签
+			action URL地址
+			method 提交方式 get/post
+			name 名称 
+			input:
+			text文本框
+			password 密码框
+			radio 单选
+			checkbox 多选
+			-->
+			<form action="demo.php" method="post" name="name1">
+				用户名：<input type="text" / value="请输入用户名"> <br />
+				密码：<input type="password" /> <br />
+				性别：男<input type="radio" value="男" name="1" checked /> 女 <input type="radio" value="女" name="1" /> <br />
+				爱好：吃饭<input type="checkbox" value="吃饭" name="hobby" /> 睡觉<input type="checkbox" value="睡觉"
+					name="hobby" /> 打豆豆<input type="checkbox" value="打豆豆" name="hobby" />
+			</form>
+		</div>
+		<div>
+			<select multiple>
+				<option>北京</option>
+				<option>武汉</option>
+				<option selected>福建</option> <!--selected表默认选中-->
+				<option>上海</option>
+				<option>广州</option>
+				<option>深圳</option>
+				<option>西安</option>
+				<option>成都</option>
+			</select>
+		</div>
+
+		<div>
+			<select>
+				<option>北京</option>
+				<option>上海</option>
+				<option>广州</option>
+				<option>深圳</option>
+				<option selected>武汉</option>
+			</select>
+		</div>
+
+		<div>
+			<select>
+				<optgroup label="水果">
+					<option value="">苹果</option>
+					<option value="">香蕉</option>
+				</optgroup>
+				<optgroup label="蔬菜">
+					<option value="">西红柿</option>
+					<option value="">青菜</option>
+				</optgroup>
+			</select>
+		</div>
+		<div>
+			<a class="a1" href="#">手机</a>
+			<a class="a1" href="#">平板</a>
+			<a class="a1" href="#">笔记本</a>
+			<a class="a1" href="#">台式</a>
+			<a class="a1" href="#">学习机</a>
+		</div>
+
+
 		<h1 id="one">我是一</h1>
 	</body>
 </html>

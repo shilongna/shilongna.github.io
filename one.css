@@ -1,0 +1,35 @@
+a {
+	text-decoration: none;
+}
+
+#wr {
+	/*
+	font-style: italic;       <italic是倾斜 normal是不倾斜>
+	font-family: '微软雅黑';  
+	font-size: 36px;         <要跟上单位px>
+	font-weight: 800;  <!--weight后面不加单位  700或bold是加粗  normal或400不加粗-->
+	*/
+
+	/*font: font-style  font-weight  font-size  font-family 顺序不能变   size family不能省略 ;*/
+	font: italic 700 36px "微软雅黑";
+	color: green;
+}
+
+#bt {
+	/*center居中 left左对齐 right右对齐*/
+	text-align: center;
+
+	/*默认none  underline下划线  line-through删除线  overline上划线*/
+	text-decoration: overline;
+}
+
+#p1 {
+	text-indent: 2em;
+	/*text-indent缩进  2em俩个文字大小*/
+	line-height: 30px;
+	/*行高间距    文本高度 +上间距 +下间距 = 行高间距*/
+}
+
+p {
+	lh20
+}
